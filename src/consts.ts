@@ -11,7 +11,7 @@ export const SITE: Site = {
   description:
     'Because the world needs yet another engineering blog',
   href: 'https://pcarion.com',
-  author: 'pcarion',
+  author: 'Pierre Carion',
   locale: 'en-US',
   featuredPostCount: 2,
   postsPerPage: 3,
@@ -34,8 +34,8 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'GitHub',
   },
   {
-    href: 'https://twitter.com/pcarion',
-    label: 'Twitter',
+    href: 'https://www.linkedin.com/in/pcarion/',
+    label: 'LinkedIn',
   },
   {
     href: 'mailto:pcarion@gmail.com',

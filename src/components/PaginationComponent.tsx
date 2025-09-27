@@ -63,7 +63,7 @@ export function PaginationComponent({
         {currentPage > 1 && (
           <PaginationItem>
             <PaginationPrevious
-              href={`${baseUrl}${currentPage - 1}`}
+              href={`${baseUrl}${currentPage > 2 ? currentPage - 1 : ''}`}
             />
           </PaginationItem>
         )}
@@ -74,7 +74,7 @@ export function PaginationComponent({
               <PaginationEllipsis />
             ) : (
               <PaginationLink
-                href={`${baseUrl}${page}`}
+                href={`${baseUrl}${page > 1 ? page : ''}`}
                 isActive={currentPage === page}
               >
                 {page}

@@ -7,6 +7,7 @@ import Layout from '@/layouts/Layout.astro'
 import { getAllProjects } from '@/lib/data-utils'
 
 const projects = await getAllProjects()
+const showProjects = false;
 ---
 
 <Layout class="max-w-3xl">
@@ -15,33 +16,53 @@ const projects = await getAllProjects()
 
   <section>
     <div class="min-w-full">
+      <!-- Hero Section with Profile Picture -->
+      <div class="mb-12 flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 blur-xl"></div>
+          <img 
+            src="/static/PierreProfileSmall.jpg" 
+            alt="Pierre Carion" 
+            class="relative h-32 w-32 rounded-full object-cover shadow-2xl ring-4 ring-background sm:h-40 sm:w-40"
+          />
+        </div>
+        <div class="flex-1 space-y-2">
+          <h1 class="text-3xl font-bold tracking-tight">Pierre Carion</h1>
+          <p class="text-lg text-muted-foreground">Principal Software Engineer</p>
+          <div class="flex flex-wrap justify-center gap-4 sm:justify-start">
+            <Link
+              href="https://www.linkedin.com/in/pcarion/"
+              class="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent"
+            >
+              <span>LinkedIn</span>
+            </Link>
+            <Link
+              href="https://github.com/pcarion"
+              class="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent"
+            >
+              <span>GitHub</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <div class="prose mb-8">
         <p class="mt-0">
-          astro-erudite is an opinionated, unstyled static blogging template
-          that prioritizes simplicity and performance, built with <Link
-            href="https://astro.build"
-            external
-            underline>Astro</Link
-          >, <Link href="https://tailwindcss.com" external underline
-            >Tailwind</Link
-          >, and <Link href="https://ui.shadcn.com" external underline
-            >shadcn/ui</Link
-          >. It provides a clean foundation for your content while being
-          extremely easy to customize.
+          Welcome to my personal website. I'm a principal software engineer passionate about building innovative solutions and sharing knowledge through writing.
         </p>
         <p>
-          To learn more about the philosophy behind this template, check out the
-          following blog post: <Link
-            href="/blog/the-state-of-static-blogs"
-            underline>The State of Static Blogs in 2024</Link
-          >.
+          Currently working at <Link
+            href="https://www.mygardyn.com"
+            underline>Gardyn</Link>, where I help build cutting-edge technology for advanced indoor gardening systems.
         </p>
       </div>
 
-      <h2 class="mb-4 text-2xl font-medium">Example Projects Listing</h2>
+	  {showProjects && (
+      <h2 class="mb-4 text-2xl font-medium">Projects:</h2>
       <div class="flex flex-col gap-4">
         {projects.map((project) => <ProjectCard project={project} />)}
       </div>
+	  )}
     </div>
   </section>
 </Layout>
