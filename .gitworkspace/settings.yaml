@@ -1,0 +1,18 @@
+version: 1
+name: blog.pcarion.com
+collections:
+  - name: posts
+    notionDatabaseUrl: https://www.notion.so/13c6f674ce1e80bf8276f3dbbba15ce4
+    outputDirectory: ./src/content/blog/{date}
+    outputFile: index.md
+    slug: "{slug}"
+    format: markdown
+    properties:
+      - title
+      - slug
+      - description (excerpt)
+      - date (publishDate)
+      - tags
+      - draft
+      - ogImageUrl
+

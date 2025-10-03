@@ -1,0 +1,23 @@
+<svg version="1.1"
+  baseProfile="full"
+  style='font-family: Lucida Console, Courier, monospace'
+  width="710" height="160"
+  xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(80, 80)" >
+  <circle fill="#87e9a9" stroke="#0f4f34" stroke-width="4px" r="30"/>
+  <text stroke="black" stroke-width="1px" text-anchor="middle" alignment-baseline="central">f162</text>
+</g>
+<g transform="translate(160, 60)" >
+  <rect fill="#C2EBF4" stroke="#0f4f34" width="300" height="40"/>
+  <svg width="300" height="40">
+    <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" stroke="black" >refs/heads/master</text>
+  </svg>
+</g>
+ <line x1="110" y1="80" x2="160" y2="80" stroke="#0f4f34" stroke-width="2" stroke-linecap="butt"/>
+<g transform="translate(510, 60)" >
+  <rect fill="#C2EBF4" stroke="#0f4f34" width="150" height="40"/>
+  <svg width="150" height="40">
+    <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" stroke="black" >HEAD</text>
+  </svg>
+</g>
+ <line x1="460" y1="80" x2="510" y2="80" stroke="#0f4f34" stroke-width="2" stroke-linecap="butt"/></svg>
