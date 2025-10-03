@@ -10,7 +10,7 @@ collections:
     properties:
       - title
       - slug
-      - description (description)
+      - description
       - date (pubDate)
       - tags
       - draft
