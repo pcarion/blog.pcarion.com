@@ -10,8 +10,8 @@ collections:
     properties:
       - title
       - slug
-      - description (excerpt)
-      - date (publishDate)
+      - description (description)
+      - date (pubDate)
       - tags
       - draft
       - ogImageUrl
